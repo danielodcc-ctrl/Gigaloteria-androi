@@ -24,11 +24,10 @@ jobs:
 
       - name: Unzip project
         run: |
-          unzip -o GigaLoteriasAndroid_0.2.zip -d project_extracted
-          if [ -f "project_extracted/gradlew" ]; then
-            mv project_extracted/* .
-          elif [ -d "project_extracted/GigaLoteriasAndroid_0.2" ]; then
-            mv project_extracted/GigaLoteriasAndroid_0.2/* .
+          unzip -o GigaLoteriasAndroid_0.2.zip
+          SRC_DIR=$(find . -maxdepth 2 -name "gradlew" -exec dirname {} \;)
+          if [ -n "$SRC_DIR" ] && [ "$SRC_DIR" != "." ]; then
+            cp -r $SRC_DIR/* .
           fi
           chmod +x gradlew
 

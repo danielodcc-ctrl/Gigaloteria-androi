@@ -1,1 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GigaLoterías Android"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona Lotería:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#333333"/>
+
+        <Spinner
+            android:id="@+id/lotterySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:drawable/btn_dropdown"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresar jugada manual (separada por comas):"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#333333"/>
+
+        <EditText
+            android:id="@+id/manualInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: 5, 12, 18, 24, 31, 40"
+            android:inputType="number"
+            android:digits="0123456789, "
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/addManualButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar Jugada"
+            android:backgroundTint="#3949AB"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/generateCombinationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sugerir Jugada Probabilística"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/analyzeHistoryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Analizar Patrones e Histórico"
+            android:backgroundTint="#0277BD"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona una opción para comenzar."
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:textColor="#212121"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Histórico de sorteos registrados:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/historyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sin registros previos."
+            android:textSize="13sp"
+            android:padding="10dp"
+            android:background="#FFFFFF"
+            android:elevation="1dp"
+            android:textColor="#616161"/>
+
+    </LinearLayout>
+</ScrollView>
